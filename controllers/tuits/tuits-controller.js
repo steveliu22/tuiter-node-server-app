@@ -1,14 +1,14 @@
-import * as tuitsDao from './tuits-dao'
+import * as tuitsDao from './tuits-dao.js'
 
 const createTuit = async (req, res) => {
     const newTuit = req.body;
-    newTuit.likes = 0;
-    newTuit.dislikes = 0;
-    newTuit.handle = '@nasa'
-    newTuit.time = '2h'
-    newTuit.username = 'NASA'
-    newTuit.image = 'nasa-logo.png'
-    newTuit.liked = false;
+    // newTuit.likes = 0;
+    // newTuit.dislikes = 0;
+    // newTuit.handle = '@nasa'
+    // newTuit.time = '2h'
+    // newTuit.username = 'NASA'
+    // newTuit.image = 'nasa-logo.png'
+    // newTuit.liked = false;
     const insertedTuit = await tuitsDao.createTuit(newTuit);
     res.json(insertedTuit);
 }  
