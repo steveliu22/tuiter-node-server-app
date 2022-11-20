@@ -11,7 +11,7 @@ const createTuit = (req, res) => {
     newTuit.username = 'NASA'
     newTuit.image = 'nasa-logo.png'
     newTuit.liked = false;
-    newTuit.push(newTuit);
+    tuits.push(newTuit);
     res.json(newTuit);
 }  
 const findTuits = (req, res) =>
